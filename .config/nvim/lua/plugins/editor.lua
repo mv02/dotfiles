@@ -78,4 +78,13 @@ return {
     'dstein64/vim-startuptime',
     cmd = 'StartupTime',
   },
+
+  {
+    'andweeb/presence.nvim',
+    event = 'VeryLazy',
+    opts = {
+      main_image = 'file',
+      neovim_image_text = 'Neovim',
+    },
+  },
 }
