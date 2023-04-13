@@ -1,3 +1,5 @@
+local lazygit
+
 return {
   {
     'gruvbox-community/gruvbox',
@@ -38,21 +40,26 @@ return {
     version = '*',
     cmd = 'ToggleTerm',
     opts = {
-      direction = 'float',
+      direction = 'vertical',
+      size = vim.o.columns * 0.4,
       float_opts = {
         border = 'curved',
       },
     },
-    config = true,
+    config = function(_, opts)
+      require('toggleterm').setup(opts)
+      local Terminal = require('toggleterm.terminal').Terminal
+      lazygit = Terminal:new({ cmd = 'lazygit', direction = 'float' })
+    end,
     keys = {
-      {
-        '<leader>gg',
-        function()
-          local Terminal = require('toggleterm.terminal').Terminal
-          local lazygit = Terminal:new({ cmd = 'lazygit' })
-          lazygit:toggle()
-        end,
-      },
+      { '<leader>gg', function() lazygit:toggle() end },
+      { '<leader>tt', '<cmd>ToggleTerm<CR>' },
+      { '<esc>', '<C-\\><C-n>', mode = 't' },
+      { '<C-h>', '<cmd>wincmd h<CR>', mode = 't' },
+      { '<C-j>', '<cmd>wincmd j<CR>', mode = 't' },
+      { '<C-k>', '<cmd>wincmd k<CR>', mode = 't' },
+      { '<C-l>', '<cmd>wincmd l<CR>', mode = 't' },
+      { '<C-w>', '<C-\\><C-n><C-w>', mode = 't' },
     },
   },
 }
