@@ -23,6 +23,9 @@ vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
 
 vim.keymap.set('n', '<leader>qq', '<cmd>qa<CR>')
+
+vim.keymap.set('n', '<leader>mm', '<cmd>silent make<CR>')
+
 vim.keymap.set('n', '<leader>tw', function() o.wrap = not o.wrap end )
 vim.keymap.set('n', '<leader>tl', function() o.relativenumber = not o.relativenumber end )
 vim.keymap.set('n', '<leader>ts', function()
