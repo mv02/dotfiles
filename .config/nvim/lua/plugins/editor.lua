@@ -67,6 +67,14 @@ return {
       auto_preview = false,
       use_diagnostic_signs = true,
     },
+    config = function(_, opts)
+      require('trouble').setup(opts)
+      vim.api.nvim_create_autocmd('QuickFixCmdPost', {
+        callback = function()
+          require('trouble').open('quickfix')
+        end
+      })
+    end,
     keys = {
       { '<leader>xx', function() require('trouble').toggle('workspace_diagnostics') end },
       { '<leader>xq', function() require('trouble').toggle('quickfix') end },
