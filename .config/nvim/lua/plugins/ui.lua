@@ -55,11 +55,20 @@ return {
       { '<leader>gg', function() lazygit:toggle() end },
       { '<leader>tt', '<cmd>ToggleTerm<CR>' },
       { '<esc>', '<C-\\><C-n>', mode = 't' },
-      { '<C-h>', '<cmd>wincmd h<CR>', mode = 't' },
-      { '<C-j>', '<cmd>wincmd j<CR>', mode = 't' },
-      { '<C-k>', '<cmd>wincmd k<CR>', mode = 't' },
-      { '<C-l>', '<cmd>wincmd l<CR>', mode = 't' },
       { '<C-w>', '<C-\\><C-n><C-w>', mode = 't' },
+    },
+  },
+
+  {
+    'numToStr/Navigator.nvim',
+    config = function()
+      require('Navigator').setup()
+    end,
+    keys = {
+      { '<C-h>', function() require('Navigator').left() end, mode = { 'n', 't' } },
+      { '<C-j>', function() require('Navigator').down() end, mode = { 'n', 't' } },
+      { '<C-k>', function() require('Navigator').up() end, mode = { 'n', 't' } },
+      { '<C-l>', function() require('Navigator').right() end, mode = { 'n', 't' } },
     },
   },
 }
