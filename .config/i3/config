@@ -191,3 +191,8 @@ bindsym $mod+Shift+3 move container to workspace number $ws3
 bindsym $mod+Shift+4 move container to workspace number $ws4
 bindsym $mod+Shift+5 move container to workspace number $ws5
 bindsym $mod+Shift+0 move scratchpad
+
+# Multi-monitor setup
+workspace $ws5 output eDP-1
+workspace $ws1 output HDMI-1-0
+bindsym $mod+Shift+period move workspace to output next
