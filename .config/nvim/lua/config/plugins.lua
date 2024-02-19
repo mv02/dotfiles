@@ -3,13 +3,11 @@ local lazygit
 return {
   -- Theme
   {
-    'gruvbox-community/gruvbox',
+    'ellisonleao/gruvbox.nvim',
     priority = 1000,
     config = function()
-      vim.g.gruvbox_invert_selection = false
-      vim.g.gruvbox_sign_column = 'none'
+      require('config.colorscheme')
       vim.cmd('colorscheme gruvbox')
-      vim.cmd('highlight CursorLineNr guibg=none')
     end,
   },
 
