@@ -1,3 +1,5 @@
+local o = vim.o
+
 vim.keymap.set('n', '<CR>', ':')
 vim.keymap.set('n', '<S-CR>', '<CR>')
 vim.keymap.set('n', '<C-s>', '<cmd>w<CR>')
