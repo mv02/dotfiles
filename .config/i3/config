@@ -155,6 +155,7 @@ bindsym $mod+Shift+p exec inkscape
 
 # Autostart
 exec --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id dunst
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id xsettingsd
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
