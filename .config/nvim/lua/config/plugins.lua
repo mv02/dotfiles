@@ -24,9 +24,18 @@ return {
   -- LSP and completion
   {
     'neovim/nvim-lspconfig',
-    config = function()
-      require('plugins.lsp')
-    end,
+    dependencies = {
+      "mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+      "hrsh7th/cmp-nvim-lsp",
+    },
+  },
+  {
+    "williamboman/mason.nvim",
+    cmd = "Mason",
+    keys = {
+      { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" },
+    },
   },
   {
     'hrsh7th/nvim-cmp',
