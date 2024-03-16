@@ -21,30 +21,9 @@ return {
     end,
   },
 
-  -- Snippets
-  {
-    'L3MON4D3/LuaSnip',
-    version = '<CurrentMajor>.*',
-    build = "make install_jsregexp",
-    dependencies = {
-      {
-        'rafamadriz/friendly-snippets',
-        config = function()
-          require('luasnip.loaders.from_vscode').lazy_load()
-        end,
-      },
-    },
-    event = 'InsertEnter',
-    keys = {
-      { '<C-j>', function() require('luasnip').jump(1) end, mode = { 's', 'i' } },
-      { '<C-k>', function() require('luasnip').jump(-1) end, mode = { 's', 'i' } },
-    },
-  },
-
   -- LSP and completion
   {
     'neovim/nvim-lspconfig',
-    event = { 'BufReadPre', 'BufNewFile' },
     config = function()
       require('plugins.lsp')
     end,
@@ -52,17 +31,25 @@ return {
   {
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
+    config = function()
+      require('plugins.cmp')
+    end,
     dependencies = {
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'hrsh7th/cmp-nvim-lsp-signature-help' },
       { 'saadparwaiz1/cmp_luasnip' },
+      {
+        'L3MON4D3/LuaSnip',
+        dependencies = 'rafamadriz/friendly-snippets',
+        build = 'make install_jsregexp',
+        config = function()
+          require('luasnip.loaders.from_vscode').lazy_load()
+        end,
+      },
       { 'hrsh7th/cmp-calc' },
       { 'hrsh7th/cmp-buffer' },
       { 'hrsh7th/cmp-path' },
     },
-    config = function()
-      require('plugins.cmp')
-    end,
   },
 
   {
