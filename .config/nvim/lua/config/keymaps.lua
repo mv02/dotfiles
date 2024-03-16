@@ -1,12 +1,6 @@
 local o = vim.o
 
-vim.keymap.set('n', '<CR>', ':')
-vim.keymap.set('n', '<S-CR>', '<CR>')
-vim.keymap.set('n', '<C-s>', '<cmd>w<CR>')
-
 vim.keymap.set('n', '<leader>qq', '<cmd>qa<CR>')
-
-vim.keymap.set('n', '<leader>mm', '<cmd>silent make<CR>')
 
 vim.keymap.set('n', '<leader>tw', function() o.wrap = not o.wrap end )
 vim.keymap.set('n', '<leader>tl', function() o.relativenumber = not o.relativenumber end )
