@@ -1,5 +1,6 @@
 local o = vim.o
 
+vim.keymap.set('n', '<C-s>', '<cmd>w<CR>')
 vim.keymap.set('n', '<leader>qq', '<cmd>qa<CR>')
 
 vim.keymap.set('n', '<leader>tw', function() o.wrap = not o.wrap end )
