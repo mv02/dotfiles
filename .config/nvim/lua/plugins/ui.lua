@@ -27,6 +27,32 @@ return {
   },
 
   {
+    'romgrk/barbar.nvim',
+    dependencies = {
+      'lewis6991/gitsigns.nvim',
+      'nvim-tree/nvim-web-devicons',
+    },
+    event = 'VeryLazy',
+    keys = {
+      { '<leader>p', '<cmd>BufferPick<CR>' },
+      { '<leader>bd', '<cmd>BufferClose<CR>' },
+      { '<leader>bp', '<cmd>BufferPin<CR>' },
+      { '<A-<>', '<cmd>BufferMovePrevious<CR>' },
+      { '<A->>', '<cmd>BufferMoveNext<CR>' },
+      { '<A-1>', '<cmd>BufferGoto 1<CR>' },
+      { '<A-2>', '<cmd>BufferGoto 2<CR>' },
+      { '<A-3>', '<cmd>BufferGoto 3<CR>' },
+      { '<A-4>', '<cmd>BufferGoto 4<CR>' },
+      { '<A-5>', '<cmd>BufferGoto 5<CR>' },
+      { '<A-6>', '<cmd>BufferGoto 6<CR>' },
+      { '<A-7>', '<cmd>BufferGoto 7<CR>' },
+      { '<A-8>', '<cmd>BufferGoto 8<CR>' },
+      { '<A-9>', '<cmd>BufferGoto 9<CR>' },
+      { '<A-0>', '<cmd>BufferLast<CR>' },
+    },
+  },
+
+  {
     'numToStr/Navigator.nvim',
     config = function()
       require('Navigator').setup()
