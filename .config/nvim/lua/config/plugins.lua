@@ -120,22 +120,6 @@ return {
     end,
   },
   {
-    'akinsho/toggleterm.nvim',
-    version = '*',
-    cmd = 'ToggleTerm',
-    keys = {
-      { '<leader>gg', function() lazygit:toggle() end },
-      { '<leader>tt', '<cmd>ToggleTerm<CR>' },
-      { '<esc>', '<C-\\><C-n>', mode = 't' },
-      { '<C-w>', '<C-\\><C-n><C-w>', mode = 't' },
-    },
-    config = function()
-      require('plugins.toggleterm')
-      local Terminal = require('toggleterm.terminal').Terminal
-      lazygit = Terminal:new({ cmd = 'lazygit', direction = 'float' })
-    end,
-  },
-  {
     'nvim-lualine/lualine.nvim',
     event = 'VeryLazy',
     opts = {
@@ -143,13 +127,6 @@ return {
         disabled_filetypes = { 'neo-tree', 'Trouble' },
       },
     },
-  },
-  {
-    'echasnovski/mini.starter',
-    version = false,
-    config = function()
-      require('mini.starter').setup()
-    end,
   },
   {
     'numToStr/Navigator.nvim',
@@ -164,19 +141,8 @@ return {
     },
   },
   {
-    'dstein64/vim-startuptime',
-    cmd = 'StartupTime',
-  },
-  {
     'andweeb/presence.nvim',
     event = 'VeryLazy',
-  },
-  {
-    'j-hui/fidget.nvim',
-    event = { 'BufReadPre', 'BufNewFile' },
-    config = function()
-      require('fidget').setup()
-    end,
   },
   {
     'lewis6991/gitsigns.nvim',
@@ -222,31 +188,5 @@ return {
     config = function()
       vim.g.vimtex_mappings_prefix = '<leader>l'
     end,
-  },
-
-  -- DAP
-  {
-    'mfussenegger/nvim-dap',
-    dependencies = { 'rcarriga/nvim-dap-ui' },
-    config = function()
-      require('plugins.dap')
-    end,
-    keys = {
-      { '<F5>', function() require('dap').continue() end },
-      { '<F6>', function() require('dap').close() end },
-      { '<F9>', function() require('dap').toggle_breakpoint() end },
-      { '<F10>', function() require('dap').step_over() end },
-      { '<F11>', function() require('dap').step_into() end },
-      { '<F12>', function() require('dap').step_out() end },
-    },
-  },
-  {
-    'rcarriga/nvim-dap-ui',
-    config = function()
-      require('dapui').setup()
-    end,
-    keys = {
-      { '<leader>dd', function() require('dapui').toggle() end },
-    },
   },
 }
