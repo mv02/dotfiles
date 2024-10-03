@@ -1,3 +1,5 @@
+local builtin = require("telescope.builtin")
+
 return {
     {
         "nvim-telescope/telescope.nvim",
@@ -5,130 +7,40 @@ return {
         dependencies = { "nvim-lua/plenary.nvim" },
         cmd = "Telescope",
         keys = {
-            {
-                "<leader>fb",
-                function()
-                    require("telescope.builtin").buffers()
-                end,
-            },
-            {
-                "<leader>ff",
-                function()
-                    require("telescope.builtin").find_files()
-                end,
-            },
-            {
-                "<leader>fF",
-                function()
-                    require("telescope.builtin").git_files()
-                end,
-            },
-            {
-                "<leader>fr",
-                function()
-                    require("telescope.builtin").oldfiles()
-                end,
-            },
-            {
-                "<leader>gc",
-                function()
-                    require("telescope.builtin").git_commits()
-                end,
-            },
-            {
-                "<leader>gs",
-                function()
-                    require("telescope.builtin").git_status()
-                end,
-            },
-            {
-                "<leader>sb",
-                function()
-                    require("telescope.builtin").current_buffer_fuzzy_find()
-                end,
-            },
-            {
-                "<leader>sc",
-                function()
-                    require("telescope.builtin").command_history()
-                end,
-            },
-            {
-                "<leader>sC",
-                function()
-                    require("telescope.builtin").commands()
-                end,
-            },
-            {
-                "<leader>sd",
-                function()
-                    require("telescope.builtin").diagnostics()
-                end,
-            },
-            {
-                "<leader>sg",
-                function()
-                    require("telescope.builtin").live_grep()
-                end,
-            },
-            {
-                "<leader>sh",
-                function()
-                    require("telescope.builtin").help_tags()
-                end,
-            },
-            {
-                "<leader>sm",
-                function()
-                    require("telescope.builtin").marks()
-                end,
-            },
-            {
-                "<leader>sM",
-                function()
-                    require("telescope.builtin").man_pages()
-                end,
-            },
-            {
-                "<leader>so",
-                function()
-                    require("telescope.builtin").vim_options()
-                end,
-            },
-            {
-                "<leader>sr",
-                function()
-                    require("telescope.builtin").lsp_references()
-                end,
-            },
-            {
-                "<leader>ss",
-                function()
-                    require("telescope.builtin").lsp_document_symbols()
-                end,
-            },
-            {
-                "<leader>sS",
-                function()
-                    require("telescope.builtin").lsp_workspace_symbols()
-                end,
-            },
-            {
-                "<leader>sw",
-                function()
-                    require("telescope.builtin").grep_string()
-                end,
-            },
+            { "<leader>fb", builtin.buffers },
+            { "<leader>ff", builtin.find_files },
+            { "<leader>fF", builtin.git_files },
+            { "<leader>fr", builtin.oldfiles },
+            { "<leader>ft", builtin.filetypes },
+            { "<leader>gb", builtin.git_branches },
+            { "<leader>gc", builtin.git_bcommits },
+            { "<leader>gC", builtin.git_commits },
+            { "<leader>gs", builtin.git_status },
+            { "<leader>gS", builtin.git_stash },
+            { "<leader>sb", builtin.current_buffer_fuzzy_find },
+            { "<leader>sc", builtin.command_history },
+            { "<leader>sC", builtin.commands },
+            { "<leader>sd", builtin.lsp_definitions },
+            { "<leader>sg", builtin.live_grep },
+            { "<leader>sh", builtin.help_tags },
+            { "<leader>sH", builtin.search_history },
+            { "<leader>si", builtin.lsp_implementations },
+            { "<leader>sm", builtin.marks },
+            { "<leader>sM", builtin.man_pages },
+            { "<leader>so", builtin.vim_options },
+            { "<leader>sr", builtin.lsp_references },
+            { "<leader>sR", builtin.registers },
+            { "<leader>ss", builtin.lsp_document_symbols },
+            { "<leader>sS", builtin.lsp_workspace_symbols },
+            { "<leader>sw", builtin.grep_string },
+            { "<leader>s`", builtin.resume },
         },
         opts = {
-            defaults = {
-                mappings = {
-                    i = {
-                        ["<esc>"] = require("telescope.actions").close,
-                    },
+            pickers = {
+                man_pages = {
+                    sections = { "ALL" },
                 },
             },
         },
-        config = true,
     },
 }
