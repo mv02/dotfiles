@@ -1,15 +1,14 @@
 return {
 	{
 		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v2.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-			"kyazdani42/nvim-web-devicons",
+			"nvim-tree/nvim-web-devicons",
 			"MunifTanjim/nui.nvim",
 		},
 		cmd = "Neotree",
 		keys = {
-			{ "<leader>fe", "<cmd>NeoTreeRevealToggle<CR>" },
+			{ "<leader>fe", "<cmd>Neotree toggle<cr>" },
 		},
 		opts = {
 			window = { position = "right" },
@@ -18,6 +17,7 @@ return {
 
 	{
 		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 		event = "VeryLazy",
 		opts = {
 			options = {
@@ -28,47 +28,19 @@ return {
 
 	{
 		"numToStr/Navigator.nvim",
-		config = function()
-			require("Navigator").setup()
-		end,
 		keys = {
-			{
-				"<C-h>",
-				function()
-					require("Navigator").left()
-				end,
-				mode = { "n", "t" },
-			},
-			{
-				"<C-j>",
-				function()
-					require("Navigator").down()
-				end,
-				mode = { "n", "t" },
-			},
-			{
-				"<C-k>",
-				function()
-					require("Navigator").up()
-				end,
-				mode = { "n", "t" },
-			},
-			{
-				"<C-l>",
-				function()
-					require("Navigator").right()
-				end,
-				mode = { "n", "t" },
-			},
+			{ "<C-h>", "<cmd>NavigatorLeft<cr>", mode = { "n", "t" } },
+			{ "<C-j>", "<cmd>NavigatorDown<cr>", mode = { "n", "t" } },
+			{ "<C-k>", "<cmd>NavigatorUp<cr>", mode = { "n", "t" } },
+			{ "<C-l>", "<cmd>NavigatorRight<cr>", mode = { "n", "t" } },
 		},
+		config = true,
 	},
 
 	{
 		"lewis6991/gitsigns.nvim",
 		event = { "BufReadPre", "BufNewFile" },
-		config = function()
-			require("gitsigns").setup()
-		end,
+		config = true,
 	},
 
 	{

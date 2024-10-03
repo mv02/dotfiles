@@ -1,36 +1,21 @@
 return {
 	{
 		"folke/trouble.nvim",
-		cmd = { "TroubleToggle", "Trouble" },
+		cmd = "Trouble",
 		keys = {
-			{
-				"<leader>xx",
-				function()
-					require("trouble").toggle("workspace_diagnostics")
-				end,
-			},
-			{
-				"<leader>xq",
-				function()
-					require("trouble").toggle("quickfix")
-				end,
-			},
-			{
-				"<leader>xl",
-				function()
-					require("trouble").toggle("loclist")
-				end,
-			},
+			{ "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>" },
+			{ "<leader>xq", "<cmd>Trouble quickfix toggle<cr>" },
+			{ "<leader>xl", "<cmd>Trouble loclist toggle<cr>" },
 		},
-		config = function()
+		opts = {
+			indent_lines = false,
+			auto_close = true,
+			auto_preview = false,
+			use_diagnostic_signs = true,
+		},
+		config = function(_, opts)
 			local trouble = require("trouble")
-
-			trouble.setup({
-				indent_lines = false,
-				auto_close = true,
-				auto_preview = false,
-				use_diagnostic_signs = true,
-			})
+			trouble.setup(opts)
 
 			vim.api.nvim_create_autocmd("QuickFixCmdPost", {
 				callback = function()

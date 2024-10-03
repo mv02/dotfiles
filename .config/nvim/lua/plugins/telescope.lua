@@ -120,16 +120,15 @@ return {
 				end,
 			},
 		},
-		config = function()
-			require("telescope").setup({
-				defaults = {
-					mappings = {
-						i = {
-							["<esc>"] = require("telescope.actions").close,
-						},
+		opts = {
+			defaults = {
+				mappings = {
+					i = {
+						["<esc>"] = require("telescope.actions").close,
 					},
 				},
-			})
-		end,
+			},
+		},
+		config = true,
 	},
 }

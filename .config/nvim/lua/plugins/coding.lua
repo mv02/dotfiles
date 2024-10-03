@@ -13,30 +13,27 @@ return {
 
 	{
 		"numToStr/Comment.nvim",
-		event = "VeryLazy",
-		config = function()
-			require("Comment").setup()
-		end,
+		keys = {
+			"gcc",
+			"gbc",
+			{ "gc", mode = { "n", "v" } },
+			{ "gb", mode = { "n", "v" } },
+		},
+		config = true,
 	},
 
 	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
-		config = function()
-			require("nvim-autopairs").setup()
-		end,
+		config = true,
 	},
 
 	{
 		"Wansmer/treesj",
 		keys = {
-			{
-				"<leader>sj",
-				function()
-					require("treesj").toggle()
-				end,
-			},
+			{ "<leader>sj", "<cmd>TSJToggle<cr>" },
 		},
+		config = true,
 	},
 
 	{
