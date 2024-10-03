@@ -4,6 +4,9 @@ return {
         cmd = "Trouble",
         keys = {
             { "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>" },
+            { "<leader>xr", "<cmd>Trouble lsp_references toggle<cr>" },
+            { "<leader>xs", "<cmd>Trouble lsp_document_symbols toggle<cr>" },
+            { "<leader>xS", "<cmd>Trouble symbols toggle<cr>" },
             { "<leader>xq", "<cmd>Trouble quickfix toggle<cr>" },
             { "<leader>xl", "<cmd>Trouble loclist toggle<cr>" },
         },
