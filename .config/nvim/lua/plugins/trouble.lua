@@ -14,6 +14,7 @@ return {
             indent_lines = false,
             auto_close = true,
             auto_preview = false,
+            focus = true,
             use_diagnostic_signs = true,
         },
         config = function(_, opts)
