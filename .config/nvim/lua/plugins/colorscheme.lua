@@ -4,7 +4,7 @@ return {
         priority = 1000,
         opts = {
             overrides = {
-                CursorLineNr = { bg = "#282828" },
+                CursorLineNr = { bg = "NONE" },
                 SignColumn = { bg = "#282828" },
                 GruvboxAquaSign = { bg = "NONE" },
                 GruvboxBlueSign = { bg = "NONE" },
