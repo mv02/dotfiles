@@ -21,7 +21,7 @@ return {
         event = "VeryLazy",
         opts = {
             options = {
-                disabled_filetypes = { "neo-tree", "Trouble" },
+                disabled_filetypes = { "neo-tree", "trouble" },
             },
         },
     },
