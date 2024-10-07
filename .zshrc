@@ -17,6 +17,8 @@ alias l="ls -la"
 alias md="mkdir"
 alias rd="rmdir"
 
+alias grep="grep --color=auto"
+
 alias g="git"
 alias ga="git add"
 alias gl="git pull"
