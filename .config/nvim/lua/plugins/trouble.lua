@@ -11,11 +11,9 @@ return {
             { "<leader>xl", "<cmd>Trouble loclist toggle<cr>" },
         },
         opts = {
-            indent_lines = false,
             auto_close = true,
             auto_preview = false,
             focus = true,
-            use_diagnostic_signs = true,
             modes = {
                 symbols = {
                     auto_preview = true,
