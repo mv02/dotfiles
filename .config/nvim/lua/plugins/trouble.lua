@@ -16,6 +16,12 @@ return {
             auto_preview = false,
             focus = true,
             use_diagnostic_signs = true,
+            modes = {
+                symbols = {
+                    auto_preview = true,
+                    win = { size = 40 },
+                },
+            },
         },
         config = function(_, opts)
             local trouble = require("trouble")
