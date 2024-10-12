@@ -17,9 +17,13 @@ return {
         config = function()
             require("conform").setup({
                 formatters_by_ft = {
+                    bash = { "beautysh" },
                     c = { "clang-format" },
                     cpp = { "clang-format" },
                     lua = { "stylua" },
+                    python = { "ruff" },
+                    sh = { "beautysh" },
+                    zsh = { "beautysh" },
                 },
 
                 format_on_save = function(bufnr)
