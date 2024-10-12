@@ -48,6 +48,7 @@ configure_keyd() {
         printf "meta = layer(alt)\n"
         printf "alt = layer(meta)\n"
     } | sudo tee -a $keyd_conf > /dev/null
+    sudo systemctl enable --now keyd
 }
 
 install_packages
