@@ -3,6 +3,19 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
+autoload -Uz compinit
+compinit
+zstyle ":completion:*" menu select
+zmodload zsh/complist
+bindkey -M menuselect "h" vi-backward-char
+bindkey -M menuselect "k" vi-up-line-or-history
+bindkey -M menuselect "l" vi-forward-char
+bindkey -M menuselect "j" vi-down-line-or-history
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey "^ " autosuggest-accept
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
 alias dots="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias dotslg="lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
