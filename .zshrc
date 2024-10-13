@@ -49,7 +49,8 @@ do
     alias $x="cd ~/uni/$x"
 done
 
-alias unipush="rsync -auv ~/uni /run/media/milan/wd --exclude env --exclude venv --exclude '*cache*'"
+alias unipush="rsync -auv ~/uni /run/media/milan/wd --exclude env --exclude venv \
+    --exclude node_modules --exclude build --exclude '*cache*'"
 alias unip="unipush"
 alias unipull="rsync -auv /run/media/milan/wd/uni ~ --exclude zaznamy"
 alias unil="unipull"
