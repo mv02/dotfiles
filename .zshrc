@@ -2,6 +2,7 @@ bindkey -v
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
+KEYTIMEOUT=1
 
 autoload -Uz compinit
 compinit
