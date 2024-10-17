@@ -44,6 +44,9 @@ alias tn="tmux new"
 alias tns="tmux new -s"
 alias ta="tmux attach"
 
+alias merlin="ssh xvodak07@merlin.fit.vutbr.cz"
+alias eva="ssh xvodak07@eva.fit.vutbr.cz"
+
 alias uni="cd ~/uni"
 for x in "iis" "imp" "ims" "isa" "itu" "ili" "pp"
 do
