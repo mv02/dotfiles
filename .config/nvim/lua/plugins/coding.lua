@@ -37,6 +37,12 @@ return {
     },
 
     {
+        "MeanderingProgrammer/render-markdown.nvim",
+        dependencies = { "nvim-treesitter/nvim-treesitter" },
+        ft = "markdown",
+    },
+
+    {
         "lervag/vimtex",
         ft = "tex",
         config = function()
