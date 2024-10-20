@@ -74,6 +74,7 @@ alias t="tmux"
 alias tn="tmux new"
 alias tns="tmux new -s"
 alias ta="tmux attach"
+alias tas="tmux attach -t"
 
 alias merlin="ssh xvodak07@merlin.fit.vutbr.cz"
 alias eva="ssh xvodak07@eva.fit.vutbr.cz"
