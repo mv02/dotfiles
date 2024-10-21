@@ -21,7 +21,7 @@ return {
                     c = { "clang-format" },
                     cpp = { "clang-format" },
                     lua = { "stylua" },
-                    python = { "ruff" },
+                    python = { "ruff_format" },
                     sh = { "beautysh" },
                     zsh = { "beautysh" },
                 },
