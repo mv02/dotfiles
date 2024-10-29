@@ -32,6 +32,7 @@ alias md="mkdir"
 alias rd="rmdir"
 
 alias grep="grep --color=auto"
+alias ip="ip -color=auto"
 
 alias g="git"
 alias ga="git add"
