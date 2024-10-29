@@ -37,6 +37,15 @@ return {
     },
 
     {
+        "danymat/neogen",
+        cmd = "Neogen",
+        keys = {
+            { "<leader>cd", "<cmd>Neogen<cr>" },
+        },
+        config = true,
+    },
+
+    {
         "MeanderingProgrammer/render-markdown.nvim",
         dependencies = { "nvim-treesitter/nvim-treesitter" },
         ft = "markdown",
