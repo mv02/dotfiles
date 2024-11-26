@@ -21,7 +21,10 @@ return {
         event = "VeryLazy",
         opts = {
             options = {
+                theme = "catppuccin",
                 disabled_filetypes = { "neo-tree", "trouble" },
+                component_separators = "",
+                section_separators = { left = "", right = "" },
             },
         },
     },

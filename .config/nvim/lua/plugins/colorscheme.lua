@@ -1,7 +1,13 @@
 return {
     {
-        "ellisonleao/gruvbox.nvim",
+        "catppuccin/nvim",
+        name = "catppuccin",
         priority = 1000,
+        config = function(_, opts) vim.cmd("colorscheme catppuccin-mocha") end,
+    },
+
+    {
+        "ellisonleao/gruvbox.nvim",
         opts = {
             overrides = {
                 CursorLineNr = { bg = "NONE" },
@@ -15,9 +21,6 @@ return {
                 GruvboxYellowSign = { bg = "NONE" },
             },
         },
-        config = function(_, opts)
-            require("gruvbox").setup(opts)
-            vim.cmd("colorscheme gruvbox")
-        end,
+        config = function(_, opts) require("gruvbox").setup(opts) end,
     },
 }
