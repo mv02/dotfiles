@@ -47,6 +47,18 @@ return {
     },
 
     {
+        "folke/zen-mode.nvim",
+        keys = {
+            { "<leader>xz", "<cmd>:ZenMode<cr>" },
+        },
+        opts = {
+            plugins = {
+                tmux = { enabled = true },
+            },
+        },
+    },
+
+    {
         "andweeb/presence.nvim",
         event = "VeryLazy",
     },
