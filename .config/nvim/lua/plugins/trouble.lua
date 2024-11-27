@@ -29,9 +29,7 @@ return {
             vim.api.nvim_set_hl(0, "TroubleNormalNC", { bg = "NONE" })
 
             vim.api.nvim_create_autocmd("QuickFixCmdPost", {
-                callback = function()
-                    trouble.open("quickfix")
-                end,
+                callback = function() trouble.open("quickfix") end,
             })
         end,
     },

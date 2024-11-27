@@ -10,9 +10,7 @@ return {
                 "L3MON4D3/LuaSnip",
                 dependencies = "rafamadriz/friendly-snippets",
                 build = "make install_jsregexp",
-                config = function()
-                    require("luasnip.loaders.from_vscode").lazy_load()
-                end,
+                config = function() require("luasnip.loaders.from_vscode").lazy_load() end,
             },
             { "hrsh7th/cmp-calc" },
             { "hrsh7th/cmp-buffer" },
@@ -32,9 +30,7 @@ return {
 
             cmp.setup({
                 snippet = {
-                    expand = function(args)
-                        require("luasnip").lsp_expand(args.body)
-                    end,
+                    expand = function(args) require("luasnip").lsp_expand(args.body) end,
                 },
                 sources = cmp.config.sources({
                     { name = "nvim_lsp" },

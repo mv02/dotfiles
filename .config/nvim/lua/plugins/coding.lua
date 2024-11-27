@@ -61,8 +61,6 @@ return {
     {
         "lervag/vimtex",
         ft = "tex",
-        config = function()
-            vim.g.vimtex_mappings_prefix = "<leader>l"
-        end,
+        config = function() vim.g.vimtex_mappings_prefix = "<leader>l" end,
     },
 }
