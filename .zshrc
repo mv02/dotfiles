@@ -22,6 +22,7 @@ fi
 alias dots="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias dotslg="lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
+alias :q="exit"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
