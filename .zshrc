@@ -34,6 +34,7 @@ alias l="ls -la"
 alias md="mkdir"
 alias rd="rmdir"
 
+alias diff="diff --color"
 alias grep="grep --color=auto"
 alias ip="ip -color=auto"
 
