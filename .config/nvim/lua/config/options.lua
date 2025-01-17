@@ -12,3 +12,7 @@ o.signcolumn = "yes"
 o.tabstop = 4
 o.termguicolors = true
 o.wrap = false
+
+vim.filetype.add({
+    extension = { jinja = "htmldjango" },
+})
