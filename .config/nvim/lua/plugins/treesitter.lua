@@ -28,7 +28,7 @@ return {
 
                 highlight = {
                     enable = true,
-                    disable = { "latex" },
+                    disable = { "latex", "htmldjango" },
                 },
 
                 indent = {
