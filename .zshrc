@@ -33,6 +33,7 @@ alias l="ls -la"
 
 alias md="mkdir"
 alias rd="rmdir"
+alias fm="ranger"
 
 alias diff="diff --color"
 alias grep="grep --color=auto"
