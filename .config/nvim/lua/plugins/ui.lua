@@ -44,6 +44,8 @@ return {
         "lewis6991/gitsigns.nvim",
         event = { "BufReadPre", "BufNewFile" },
         keys = {
+            { "<leader>gb", "<cmd>Gitsigns blame<cr>" },
+            { "<leader>gB", "<cmd>Gitsigns blame_line<cr>" },
             { "<leader>gr", "<cmd>Gitsigns reset_hunk<cr>" },
             { "<leader>gR", "<cmd>Gitsigns reset_buffer<cr>" },
             { "[h", "<cmd>Gitsigns prev_hunk<cr>" },
