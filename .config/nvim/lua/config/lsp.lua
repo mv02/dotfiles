@@ -5,9 +5,7 @@ vim.lsp.config("*", { capabilities = capabilities })
 
 local servers = {
     "clangd",
-    "jdtls",
     "pyright",
-    "texlab",
 }
 
 for _, server in ipairs(servers) do
