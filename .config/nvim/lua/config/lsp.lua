@@ -6,6 +6,7 @@ vim.lsp.config("*", { capabilities = capabilities })
 local servers = {
     "clangd",
     "pyright",
+    "rust_analyzer",
 }
 
 for _, server in ipairs(servers) do
