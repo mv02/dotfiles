@@ -4,19 +4,16 @@ return {
         name = "catppuccin",
         priority = 1000,
         opts = {
-            integrations = {
-                mason = true,
-                lsp_trouble = true,
-                native_lsp = {
-                    underlines = {
-                        errors = { "undercurl" },
-                        hints = { "undercurl" },
-                        warnings = { "undercurl" },
-                        information = { "undercurl" },
-                        ok = { "undercurl" },
-                    },
+            lsp_styles = {
+                underlines = {
+                    errors = { "undercurl" },
+                    hints = { "undercurl" },
+                    warnings = { "undercurl" },
+                    information = { "undercurl" },
+                    ok = { "undercurl" },
                 },
             },
+            auto_integrations = true,
         },
         config = function(_, opts)
             require("catppuccin").setup(opts)
