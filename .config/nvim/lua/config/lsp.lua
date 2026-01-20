@@ -14,6 +14,7 @@ for _, server in ipairs(servers) do
 end
 
 vim.diagnostic.config({
+    virtual_text = true,
     signs = {
         text = {
             [vim.diagnostic.severity.ERROR] = "",
