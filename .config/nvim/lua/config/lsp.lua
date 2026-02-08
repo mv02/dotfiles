@@ -5,6 +5,7 @@ vim.lsp.config("*", { capabilities = capabilities })
 
 local servers = {
     "clangd",
+    "hls",
     "pyright",
     "rust_analyzer",
 }
