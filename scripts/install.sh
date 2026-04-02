@@ -34,11 +34,11 @@ install_packages() {
     sudo pacman -S "${packages[@]}" --noconfirm
 }
 
-install_yay() {
-    git clone https://aur.archlinux.org/yay.git /tmp/yay
-    cd /tmp/yay || exit
+install_paru() {
+    git clone https://aur.archlinux.org/paru.git /tmp/paru
+    cd /tmp/paru || exit
     makepkg -si --noconfirm
-    cd ~ || exit
+    cd || exit
 }
 
 configure_keyd() {
@@ -52,5 +52,5 @@ configure_keyd() {
 }
 
 install_packages
-install_yay
+install_paru
 configure_keyd
