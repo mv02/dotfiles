@@ -19,6 +19,14 @@ if [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; 
     ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 fi
 
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
 alias dots="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias dotslg="lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
