@@ -52,6 +52,11 @@ configure_keyd() {
     sudo systemctl enable --now keyd
 }
 
+install_yazi_plugins() {
+    ya pkg add dedukun/bookmarks
+}
+
 install_packages
 install_paru
 configure_keyd
+install_yazi_plugins
