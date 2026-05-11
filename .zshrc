@@ -133,6 +133,15 @@ alias tns="tmux new -s"
 alias ta="tmux attach"
 alias tas="tmux attach -t"
 
+alias mdtopdf="pandoc \
+    --pdf-engine xelatex \
+    -V papersize:a4 \
+    -V geometry:margin=2.5cm \
+    -V mainfont=Inter \
+    -V monofont='JetBrainsMono Nerd Font' \
+    -V monofontoptions='Scale=0.8' \
+    -V mathfont='STIX Two Math'"
+
 alias merlin="ssh xvodak07@merlin.fit.vutbr.cz"
 alias eva="ssh xvodak07@eva.fit.vutbr.cz"
 
