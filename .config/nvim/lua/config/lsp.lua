@@ -6,9 +6,12 @@ vim.lsp.config("*", { capabilities = capabilities })
 local servers = {
     "bashls",
     "clangd",
+    "dotls",
     "hls",
     "pyright",
     "rust_analyzer",
+    "svelte",
+    "ts_ls",
 }
 
 for _, server in ipairs(servers) do
